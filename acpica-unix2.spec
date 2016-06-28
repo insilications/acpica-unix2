@@ -4,7 +4,7 @@
 #
 Name     : acpica-unix2
 Version  : 20160527
-Release  : 7
+Release  : 8
 URL      : https://acpica.org/sites/acpica/files/acpica-unix2-20160527.tar.gz
 Source0  : https://acpica.org/sites/acpica/files/acpica-unix2-20160527.tar.gz
 Summary  : No detailed summary available
