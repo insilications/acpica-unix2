@@ -4,7 +4,7 @@
 #
 Name     : acpica-unix2
 Version  : 20161222
-Release  : 13
+Release  : 14
 URL      : https://acpica.org/sites/acpica/files/acpica-unix2-20161222.tar.gz
 Source0  : https://acpica.org/sites/acpica/files/acpica-unix2-20161222.tar.gz
 Summary  : No detailed summary available
@@ -33,10 +33,11 @@ bin components for the acpica-unix2 package.
 
 %build
 export LANG=C
+export SOURCE_DATE_EPOCH=1484418814
 make V=1  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1484418416
+export SOURCE_DATE_EPOCH=1484418814
 rm -rf %{buildroot}
 %make_install
 
