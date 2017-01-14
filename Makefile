@@ -1,5 +1,5 @@
 PKG_NAME := acpica-unix2
-URL := https://acpica.org/sites/acpica/files/acpica-unix2-20161117.tar.gz
-ARCHIVES :=
+URL := https://acpica.org/sites/acpica/files/acpica-unix2-20161222.tar.gz
+
 
 include ../common/Makefile.common
