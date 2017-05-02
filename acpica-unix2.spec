@@ -4,7 +4,7 @@
 #
 Name     : acpica-unix2
 Version  : 20170303
-Release  : 15
+Release  : 16
 URL      : https://acpica.org/sites/acpica/files/acpica-unix2-20170303.tar.gz
 Source0  : https://acpica.org/sites/acpica/files/acpica-unix2-20170303.tar.gz
 Summary  : No detailed summary available
