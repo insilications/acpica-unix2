@@ -4,7 +4,7 @@
 #
 Name     : acpica-unix2
 Version  : 20180105
-Release  : 25
+Release  : 26
 URL      : https://acpica.org/sites/acpica/files/acpica-unix2-20180105.tar.gz
 Source0  : https://acpica.org/sites/acpica/files/acpica-unix2-20180105.tar.gz
 Summary  : No detailed summary available
