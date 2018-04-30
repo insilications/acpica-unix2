@@ -1,5 +1,5 @@
 PKG_NAME := acpica-unix2
-URL = https://acpica.org/sites/acpica/files/acpica-unix2-20180209.tar.gz
+URL = https://acpica.org/sites/acpica/files/acpica-unix2-20180427.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
