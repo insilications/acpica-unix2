@@ -4,7 +4,7 @@
 #
 Name     : acpica-unix2
 Version  : 20180427
-Release  : 28
+Release  : 29
 URL      : https://acpica.org/sites/acpica/files/acpica-unix2-20180427.tar.gz
 Source0  : https://acpica.org/sites/acpica/files/acpica-unix2-20180427.tar.gz
 Summary  : No detailed summary available
