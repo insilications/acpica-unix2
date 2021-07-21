@@ -1,5 +1,6 @@
 PKG_NAME := acpica-unix2
-URL = https://acpica.org/sites/acpica/files/acpica-unix2-20210331.tar.gz
+URL = https://github.com/acpica/acpica.git
 ARCHIVES = 
+ARCHIVES_GIT = 
 
 include ../common/Makefile.common

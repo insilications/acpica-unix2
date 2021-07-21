@@ -1,3 +1,5 @@
 # This file contains recursive sources that require this package
 acrn-hypervisor
+acrn-hypervisor-dev
+acrn-hypervisor-staticdev
 edk2
