@@ -4,16 +4,19 @@
 #
 %define keepstatic 1
 Name     : acpica-unix2
-Version  : 04.21
-Release  : 201
-URL      : file:///aot/build/clearlinux/packages/acpica-unix2/acpica-unix2-v04_21.tar.gz
-Source0  : file:///aot/build/clearlinux/packages/acpica-unix2/acpica-unix2-v04_21.tar.gz
+Version  : 30.21
+Release  : 202
+URL      : file:///aot/build/clearlinux/packages/acpica-unix2/acpica-unix2-v30_21.tar.gz
+Source0  : file:///aot/build/clearlinux/packages/acpica-unix2/acpica-unix2-v30_21.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause
 Requires: acpica-unix2-bin = %{version}-%{release}
 BuildRequires : bison
 BuildRequires : flex
+# Suppress stripping binaries
+%define __strip /bin/true
+%define debug_package %{nil}
 
 %description
 Build EFI ACPICA Utilities
@@ -38,7 +41,7 @@ unset https_proxy
 unset no_proxy
 export SSL_CERT_FILE=/var/cache/ca-certs/anchors/ca-certificates.crt
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1626866989
+export SOURCE_DATE_EPOCH=1628146085
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -63,7 +66,7 @@ make  %{?_smp_mflags}    V=1 VERBOSE=1
 
 
 %install
-export SOURCE_DATE_EPOCH=1626866989
+export SOURCE_DATE_EPOCH=1628146085
 rm -rf %{buildroot}
 %make_install
 
