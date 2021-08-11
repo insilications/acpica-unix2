@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : acpica-unix2
-Version  : 30.21
-Release  : 202
-URL      : file:///aot/build/clearlinux/packages/acpica-unix2/acpica-unix2-v30_21.tar.gz
-Source0  : file:///aot/build/clearlinux/packages/acpica-unix2/acpica-unix2-v30_21.tar.gz
+Version  : 07.30.21
+Release  : 203
+URL      : file:///aot/build/clearlinux/packages/acpica-unix2/acpica-unix2-v07.30.21.tar.gz
+Source0  : file:///aot/build/clearlinux/packages/acpica-unix2/acpica-unix2-v07.30.21.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -41,20 +41,20 @@ unset https_proxy
 unset no_proxy
 export SSL_CERT_FILE=/var/cache/ca-certs/anchors/ca-certificates.crt
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1628146085
+export SOURCE_DATE_EPOCH=1628708910
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
 ## altflags1 content
-export CFLAGS="-O2"
-export CXXFLAGS="-O2"
+export CFLAGS="-O3"
+export CXXFLAGS="-O3"
 #
-export FCFLAGS="-O2"
-export FFLAGS="-O2"
-export CFFLAGS="-O2"
+export FCFLAGS="-O3"
+export FFLAGS="-O3"
+export CFFLAGS="-O3"
 #
-export LDFLAGS="-O2"
+export LDFLAGS="-O3"
 #
 export AR=/usr/bin/gcc-ar
 export RANLIB=/usr/bin/gcc-ranlib
@@ -66,7 +66,7 @@ make  %{?_smp_mflags}    V=1 VERBOSE=1
 
 
 %install
-export SOURCE_DATE_EPOCH=1628146085
+export SOURCE_DATE_EPOCH=1628708910
 rm -rf %{buildroot}
 %make_install
 
