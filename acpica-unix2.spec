@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : acpica-unix2
-Version  : 07.30.21
-Release  : 203
-URL      : file:///aot/build/clearlinux/packages/acpica-unix2/acpica-unix2-v07.30.21.tar.gz
-Source0  : file:///aot/build/clearlinux/packages/acpica-unix2/acpica-unix2-v07.30.21.tar.gz
+Version  : 3.12.2021
+Release  : 502
+URL      : file:///aot/build/clearlinux/packages/acpica-unix2/acpica-unix2-v3.12.2021.tar.gz
+Source0  : file:///aot/build/clearlinux/packages/acpica-unix2/acpica-unix2-v3.12.2021.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -41,12 +41,12 @@ unset https_proxy
 unset no_proxy
 export SSL_CERT_FILE=/var/cache/ca-certs/anchors/ca-certificates.crt
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1628708910
+export SOURCE_DATE_EPOCH=1638672826
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-## altflags1 content
+## altflags1f content
 export CFLAGS="-O3"
 export CXXFLAGS="-O3"
 #
@@ -61,12 +61,12 @@ export RANLIB=/usr/bin/gcc-ranlib
 export NM=/usr/bin/gcc-nm
 #
 export MAKEFLAGS=%{?_smp_mflags}
-## altflags1 end
+## altflags1f end
 make  %{?_smp_mflags}    V=1 VERBOSE=1
 
 
 %install
-export SOURCE_DATE_EPOCH=1628708910
+export SOURCE_DATE_EPOCH=1638672826
 rm -rf %{buildroot}
 %make_install
 

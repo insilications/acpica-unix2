@@ -3,3 +3,4 @@ acrn-hypervisor
 acrn-hypervisor-dev
 acrn-hypervisor-staticdev
 edk2
+ioc-cbc-tools
