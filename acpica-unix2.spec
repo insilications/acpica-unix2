@@ -5,12 +5,13 @@
 %define keepstatic 1
 Name     : acpica-unix2
 Version  : 5.7.2022
-Release  : 604
+Release  : 605
 URL      : file:///aot/build/clearlinux/packages/acpica-unix2/acpica-unix2-v5.7.2022.tar.gz
 Source0  : file:///aot/build/clearlinux/packages/acpica-unix2/acpica-unix2-v5.7.2022.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause
+Requires: acpica-unix2-bin = %{version}-%{release}
 BuildRequires : bison
 BuildRequires : flex
 # Suppress stripping binaries
@@ -19,9 +20,15 @@ BuildRequires : flex
 Patch1: 0001-disable-Werror.patch
 
 %description
-Build EFI ACPICA Utilities
-The EFI porting of the ACPICA utilities can be built with GNU EFI and EDK2.
-However, the porting has only been tested in a Linux environment.
+No detailed description available
+
+%package bin
+Summary: bin components for the acpica-unix2 package.
+Group: Binaries
+
+%description bin
+bin components for the acpica-unix2 package.
+
 
 %prep
 %setup -q -n acpica-unix2
@@ -34,7 +41,7 @@ unset https_proxy
 unset no_proxy
 export SSL_CERT_FILE=/var/cache/ca-certs/anchors/ca-certificates.crt
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1658320647
+export SOURCE_DATE_EPOCH=1658320766
 ## altflags1f content
 ## altflags1
 unset ASFLAGS
@@ -96,11 +103,13 @@ export QT_FONT_DPI=88
 export GTK_USE_PORTAL=1
 export DESKTOP_SESSION=plasma
 ## altflags1f end
-make  %{?_smp_mflags}    V=1 VERBOSE=1 CFLAGS="${CFLAGS}" ASMFLAGS="${ASMFLAGS}" CXXFLAGS="${CXXFLAGS}" FFLAGS="${FFLAGS}" FCFLAGS="${FCFLAGS}" LDFLAGS="${LDFLAGS}" LIBS+="${LIBS}"
+## make_macro content
+make -j20
+## make_macro end
 
 
 %install
-export SOURCE_DATE_EPOCH=1658320647
+export SOURCE_DATE_EPOCH=1658320766
 rm -rf %{buildroot}
 ## altflags1f content
 ## altflags1
@@ -167,3 +176,14 @@ export DESKTOP_SESSION=plasma
 
 %files
 %defattr(-,root,root,-)
+
+%files bin
+%defattr(-,root,root,-)
+/usr/bin/acpibin
+/usr/bin/acpidump
+/usr/bin/acpiexamples
+/usr/bin/acpiexec
+/usr/bin/acpihelp
+/usr/bin/acpisrc
+/usr/bin/acpixtract
+/usr/bin/iasl
