@@ -11,6 +11,7 @@ Source0  : file:///aot/build/clearlinux/packages/acpica-unix2/acpica-unix2-v5.7.
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause
+Requires: acpica-unix2-bin = %{version}-%{release}
 BuildRequires : bison
 BuildRequires : flex
 # Suppress stripping binaries
@@ -19,9 +20,15 @@ BuildRequires : flex
 Patch1: 0001-disable-Werror.patch
 
 %description
-Build EFI ACPICA Utilities
-The EFI porting of the ACPICA utilities can be built with GNU EFI and EDK2.
-However, the porting has only been tested in a Linux environment.
+No detailed description available
+
+%package bin
+Summary: bin components for the acpica-unix2 package.
+Group: Binaries
+
+%description bin
+bin components for the acpica-unix2 package.
+
 
 %prep
 %setup -q -n acpica-unix2
@@ -34,7 +41,7 @@ unset https_proxy
 unset no_proxy
 export SSL_CERT_FILE=/var/cache/ca-certs/anchors/ca-certificates.crt
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1658505100
+export SOURCE_DATE_EPOCH=1658505149
 ## altflags1f content
 ## altflags1
 unset ASFLAGS
@@ -102,7 +109,7 @@ make -j20
 
 
 %install
-export SOURCE_DATE_EPOCH=1658505100
+export SOURCE_DATE_EPOCH=1658505149
 rm -rf %{buildroot}
 ## altflags1f content
 ## altflags1
@@ -171,3 +178,14 @@ export DESKTOP_SESSION=plasma
 
 %files
 %defattr(-,root,root,-)
+
+%files bin
+%defattr(-,root,root,-)
+/usr/bin/acpibin
+/usr/bin/acpidump
+/usr/bin/acpiexamples
+/usr/bin/acpiexec
+/usr/bin/acpihelp
+/usr/bin/acpisrc
+/usr/bin/acpixtract
+/usr/bin/iasl
